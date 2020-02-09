@@ -1,0 +1,13 @@
+.btn-outline-info {
+  color: #f1f1f1;
+  border-color: #f1f1f1;
+  width: 182px;
+}
+
+.btn-outline-info:focus {
+  box-shadow: none;
+}
+
+.fav-icon {
+  margin: 10px;
+}

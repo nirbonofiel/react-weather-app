@@ -1,0 +1,25 @@
+.favorite-item {
+  text-align: center;
+  margin-top: 40px;
+  padding: 10px;
+  background: linear-gradient(
+    9deg,
+    rgba(241, 241, 241, 1) 60%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.title-name {
+  font-weight: 700;
+  font-size: 27px;
+}
+
+.description {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.favorite-item img {
+  width: 100px;
+  margin: 15px;
+}

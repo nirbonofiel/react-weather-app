@@ -1,0 +1,20 @@
+.home-container {
+  box-shadow: 0px 0px 8px -2px rgba(156, 151, 156, 1);
+  margin-top: 20px;
+  min-height: 600px;
+  /* background-image: url('../../assets/clouds-2085112_1920.jpg'); */
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.headline-text {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  margin: 50px 0;
+  color: #f1f1f1;
+}

@@ -1,0 +1,22 @@
+.day-item {
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  background: linear-gradient(
+    9deg,
+    rgba(241, 241, 241, 1) 60%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.title {
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 767px) {
+  .day-item {
+    margin: 5px;
+  }
+}

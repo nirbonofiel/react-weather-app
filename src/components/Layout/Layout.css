@@ -1,0 +1,33 @@
+.bg-light {
+  background: linear-gradient(
+    10deg,
+    rgba(223, 232, 235, 1) 0%,
+    rgba(48, 84, 173, 1) 70%
+  );
+}
+
+.bg-dark {
+  background: linear-gradient(
+    80deg,
+    rgba(223, 232, 235, 1) 0%,
+    rgb(46, 69, 95) 70%
+  );
+}
+
+.btn-primary,
+.btn-primary:focus {
+  color: rgba(255, 255, 255);
+  background-color: transparent;
+  border-color: rgba(255, 255, 255);
+  width: 138px;
+  box-shadow: none;
+}
+
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: rgba(255, 255, 255);
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: rgb(232, 232, 233, 0.5);
+}
