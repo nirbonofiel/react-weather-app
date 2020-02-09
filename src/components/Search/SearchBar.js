@@ -61,7 +61,6 @@ const SearchBar = props => {
                 </div>
               )}
             />
-            {/* {content.errorMessage ? <h2>{content.errorMessage}</h2> : null} */}
           </div>
         </div>
       </div>

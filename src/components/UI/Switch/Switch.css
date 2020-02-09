@@ -18,6 +18,10 @@
   z-index: 1;
 }
 
+.switch-container.disabled {
+  opacity: 0.5;
+}
+
 .switch-container div {
   position: absolute;
   width: 100%;

@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
 
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 
-import Layout from '../src/components/Layout/Layout';
+import Layout from './components/UI/Layout/Layout';
 import Home from '../src/containers/Home/Home';
 import Favorite from './containers/Favorites/Favorites';
 
@@ -12,6 +12,7 @@ const App = props => {
     <React.Fragment>
       <Layout>
         <Switch>
+          <Redirect exact from="/" to="/home" />
           <Route path="/home" component={Home} />
           <Route path="/favorites" component={Favorite} />
         </Switch>

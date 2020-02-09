@@ -2,8 +2,8 @@ import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import * as actionType from '../../store/actionTypes';
-import Switch from '../UI/Switch/Switch';
+import * as actionType from '../../../store/actionTypes';
+import Switch from '../Switch/Switch';
 
 import './Layout.css';
 
@@ -17,7 +17,8 @@ const Layout = props => {
 
   if (application.allowNightMode) {
     nightModeSwitchType = '🌙';
-    if (!weather.currentWeather.isDayTime) backgroundColor = 'dark';
+    if (weather.currentWeather != null && !weather.currentWeather.isDayTime)
+      backgroundColor = 'dark';
   }
 
   const onChangeUnitHandler = () => {
@@ -46,6 +47,12 @@ const Layout = props => {
             <Switch
               changed={onChangeModeHandler}
               switchType={nightModeSwitchType}
+              disabled={
+                weather.currentWeather !== null
+                  ? weather.currentWeather.isDayTime
+                  : false
+              }
+              tooltipText="Available only at night time"
             />
             <NavLink className="nav-link" to="/home">
               Home

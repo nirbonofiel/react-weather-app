@@ -32,18 +32,18 @@ const Home = () => {
   return (
     <div>
       <SearchBar items={weather.items} />
-      <BackgroundContainer
-        containerClass="home-container"
-        allowNightMode={application.allowNightMode}
-        isDayTime={weather.currentWeather.isDayTime}
-      >
-        {application.errorMsg !== null ? (
-          <ErrorHandler
-            error={application.errorMsg}
-            show={application.modalShow}
-          />
-        ) : null}
-        {weather.currentWeather !== null ? (
+      {weather.currentWeather !== null ? (
+        <BackgroundContainer
+          containerClass="home-container"
+          allowNightMode={application.allowNightMode}
+          isDayTime={weather.currentWeather.isDayTime}
+        >
+          {application.errorMsg !== null ? (
+            <ErrorHandler
+              error={application.errorMsg}
+              show={application.modalShow}
+            />
+          ) : null}
           <React.Fragment>
             <div className="header-container">
               <CurrentForecast
@@ -74,8 +74,8 @@ const Home = () => {
               }
             />
           </React.Fragment>
-        ) : null}
-      </BackgroundContainer>
+        </BackgroundContainer>
+      ) : null}
     </div>
   );
 };

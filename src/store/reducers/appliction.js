@@ -3,7 +3,7 @@ import * as actionType from '../actionTypes';
 const initialState = {
   errorMsg: null,
   modalShow: false,
-  allowNightMode: false,
+  allowNightMode: true,
   temperatureUnit: 'C'
 };
 
@@ -33,10 +33,10 @@ const reducer = (state = initialState, action) => {
         temperatureUnit: currTemp
       };
     case actionType.ALLOW_NIGHT_MOOD:
-      let nightMood = !state.allowNightMode;
+      let nightMode = !state.allowNightMode;
       return {
         ...state,
-        allowNightMode: nightMood
+        allowNightMode: nightMode
       };
     default:
       return state;
