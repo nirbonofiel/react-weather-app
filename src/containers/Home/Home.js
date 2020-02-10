@@ -8,6 +8,7 @@ import {
 
 import './Home.css';
 import DaysList from '../../components/DaysList/DaysList';
+import { Spinner } from 'react-bootstrap';
 
 import ErrorHandler from '../../components/UI/ErrorHandler/ErrorHandler';
 import SearchBar from '../../components/Search/SearchBar';
@@ -75,7 +76,11 @@ const Home = () => {
             />
           </React.Fragment>
         </BackgroundContainer>
-      ) : null}
+      ) : (
+        <div className="text-center">
+          <Spinner animation="border" variant="secondary" />
+        </div>
+      )}
     </div>
   );
 };

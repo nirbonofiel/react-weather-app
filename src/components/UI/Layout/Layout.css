@@ -31,3 +31,8 @@
 .navbar-light .navbar-nav .nav-link {
   color: rgb(232, 232, 233, 0.5);
 }
+
+.spinner-border {
+  text-align: center;
+  margin-top: 50px;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import './Favorites.css';
+import { Spinner } from 'react-bootstrap';
 
 import { useSelector } from 'react-redux';
 import FavoriteList from '../../components/FavoritesList/FavoritesList';
@@ -10,16 +11,24 @@ const Favorites = () => {
   const application = useSelector(state => state.application);
 
   return (
-    <BackgroundContainer
-      containerClass="favorites-container"
-      allowNightMode={application.allowNightMode}
-      isDayTime={weather.currentWeather.isDayTime}
-    >
-      <FavoriteList
-        favoriteList={weather.favoriteLocationsForecasts}
-        temperatureUnit={application.temperatureUnit}
-      />
-    </BackgroundContainer>
+    <div>
+      {weather.currentWeather !== null ? (
+        <BackgroundContainer
+          containerClass="favorites-container"
+          allowNightMode={application.allowNightMode}
+          isDayTime={weather.currentWeather.isDayTime}
+        >
+          <FavoriteList
+            favoriteList={weather.favoriteLocationsForecasts}
+            temperatureUnit={application.temperatureUnit}
+          />
+        </BackgroundContainer>
+      ) : (
+        <div className="text-center">
+          <Spinner animation="border" variant="secondary" />
+        </div>
+      )}
+    </div>
   );
 };
 

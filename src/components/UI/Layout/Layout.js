@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Nav } from 'react-bootstrap';
+import { Navbar, Nav, Spinner } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import * as actionType from '../../../store/actionTypes';
@@ -48,9 +48,11 @@ const Layout = props => {
               changed={onChangeModeHandler}
               switchType={nightModeSwitchType}
               disabled={
-                weather.currentWeather !== null
-                  ? weather.currentWeather.isDayTime
-                  : false
+                weather.currentWeather !== null ? (
+                  weather.currentWeather.isDayTime
+                ) : (
+                  <Spinner animation="border" variant="secondary" />
+                )
               }
               tooltipText="Available only at night time"
             />

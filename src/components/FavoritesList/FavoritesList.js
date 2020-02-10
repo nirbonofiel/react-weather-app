@@ -5,7 +5,7 @@ import { Row } from 'react-bootstrap';
 import FavoriteItem from './FavoriteItem/FavoriteItem';
 
 const FavoriteList = props => {
-  let content = <p className="placeholder">Got no favorites yet!</p>;
+  let content = <p className="placeholder">No favorites yet!</p>;
   if (props.favoriteList.length > 0) {
     content = props.favoriteList.map(fav => (
       <FavoriteItem
